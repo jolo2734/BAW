@@ -10,3 +10,19 @@ Wymagany jest zainstalowany program "msfconsole"
 
 ## Uruchamianie exploitów 
 msfconsole -r <plik.rc>
+
+# Opis exploitów
+
+## ProFTPd
+
+## SSH BruteForce
+
+## IRC(UnrealIRC)
+
+## PHPMyAdmin BruteForce
+
+## Drupal
+
+## Apache mod-cgi
+
+## Ruby on Rails
