@@ -1,0 +1,5 @@
+use auxiliary/scanner/http/dir_scanner
+set RPORT 3500
+set RHOSTS 192.168.100.86
+set dictionary /usr/share/wordlists/wfuzz/general/medium.txt
+run
