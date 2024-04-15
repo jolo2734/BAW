@@ -5,6 +5,8 @@ Celem projektu jest wykrycie i wykorzystanie jak największej ilości podatnośc
 ## Zawartość repozytorium
 - **attack_conf** - folder zawierający pliki ".rc" oraz skrypty w języku Bash do/pomagające w automatycznej exploitacji
 
+## Wymagania
+Wymagany jest zainstalowany program msfconsole
 
 ## Uruchamianie exploitów
 Automatyzacja 
