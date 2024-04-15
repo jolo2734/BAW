@@ -4,6 +4,7 @@ Celem projektu jest wykrycie i wykorzystanie jak największej ilości podatnośc
 
 ## Zawartość repozytorium
 - **attack_conf** - folder zawierający pliki ".rc" oraz skrypty w języku Bash do/pomagające w automatycznej exploitacji
+- **nmap** - zawiera zrzuty ekranu z wyników skanowania programem Nmap
 
 ## Wymagania
 Wymagany jest zainstalowany program "msfconsole"
