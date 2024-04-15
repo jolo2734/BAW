@@ -7,11 +7,15 @@ Celem projektu jest wykrycie i wykorzystanie jak największej ilości podatnośc
 
 ## Wymagania
 Wymagany jest zainstalowany program "msfconsole"
+(U nas na systemie operacyjnym Kali Linux)
 
 ## Uruchamianie exploitów 
 msfconsole -r <plik.rc>
 
-# Opis exploitów
+# Wyniki nmap'a
+![Wyniki nmap'a](/nmap/nmap.jpg)
+
+# Opis wykorzystanych podatności oraz exploitów
 
 ## ProFTPd
 
