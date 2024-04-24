@@ -35,6 +35,9 @@ Moduł ten wykorzystuje metodę SQL Injection klucza/wartości parametru HTTP Dr
 • ustawienie TARGET 0: metoda wstrzykiwania PHP do pamięci podręcznej formularzy (domyślna). Wykorzystuje to SQL do przesłania złośliwego formularza do pamięci podręcznej Drupala, a następnie wyzwala wpis w pamięci podręcznej w celu wykonania ładunku za pomocą łańcucha POP. 
 • ustawienie TARGET 1: metoda wstrzykiwania po użytkowniku. Spowoduje to utworzenie nowego użytkownika Drupala, dodanie go do grupy administratorów, włączenie modułu PHP Drupala, przyznanie administratorom prawa do dołączania kodu PHP do swoich postów, utworzenie nowego postu zawierającego ładunek i podgląd go w celu uruchomienia wykonania ładunku.
 
+## Samba
+Wykorzystując wcześniej poznane hasło użytkownika chewbacca możemy wrzucić backdoor ”web shellowy” na serwer Samba, a następnie nasłuchując handlerem i aktywując backdoor otrzymać sesje
+
 ## Apache mod-cgi
 Moduł ten wykorzystuje lukę w zabezpieczeniach Shellshock, lukę w sposobie, w jaki powłoka bash obsługuje zewnętrzne zmienne środowiskowe. Moduł ten atakuje skrypty CGI na serwerze WWW Apache, ustawiając zmienną środowiskową HTTP_USER_AGENT na definicję szkodliwej funkcji.
 
