@@ -40,3 +40,8 @@ Moduł ten wykorzystuje lukę w zabezpieczeniach Shellshock, lukę w sposobie, w
 
 ## Ruby on Rails
 Moduł ten wykorzystuje lukę w zabezpieczeniach umożliwiającą zdalne wykonanie kodu we wbudowanym procesorze żądań komponentu Ruby on Rails ActionPack. Ta luka umożliwia osobie atakującej przetworzenie ERB do wbudowanego procesora JSON, który jest następnie renderowany, umożliwiając pełne RCE w czasie wykonywania, bez rejestrowania warunku błędu.  
+
+## Docker Daemon Local Privilege Escalation
+Demon Docker działający w systemie ujawnia niezabezpieczone gniazda TCP, co umożliwia lukę w zabezpieczeniach umożliwiającą lokalną eskalację uprawnień, którą można wykorzystać za pomocą modułu Docker Daemon – Unprotected TCP Socket Exploit.
+Ten exploit wymaga sesji działającej jako użytkownik w grupie dokerów. Konfiguracja Metasploitable 3 dodaje użytkowników boba_fett, jabba_hutt, greedo i Chewbacca do grupy dokerów.
+Wspomniany powyżej exploit dla Unreal IRCd byłby dobrym kandydatem do uzyskania sesji, ponieważ Unreal IRCd działa jako użytkownik boba_fett. Ten exploit wymagałby użycia exploita Unreal IRCd z ładunkiem cmd/unix/reverse_perl.
