@@ -24,14 +24,11 @@ Moduł ten wykorzystuje polecenia SITE CPFR/CPTO mod_copy w ProFTPD w wersji 1.3
 ## SSH - BruteForce
 Możliwe było zalogowanie się do zdalnego serwera SSH przy użyciu domyślnych danych uwierzytelniających. Ponieważ terminal VT „SSH Brute Force Logins With Default Credentials” (OID: 1.3.6.1.4.1.25623.1.0.108013) może przekroczyć limit czasu, faktyczne zgłaszanie tej luki odbywa się w tym VT. Preferencja skryptu „Przekroczenie limitu czasu raportu” umożliwia skonfigurowanie raportowania takiego przekroczenia limitu czasu.
 
-## PHPMyAdmin - BruteForce
-Ten moduł wykorzystuje lukę PREG_REPLACE_EVAL w pliku Apply_prefix_tbl programu phpMyAdmin w obrębie bibliotek/mult_submits.inc.php za pośrednictwem db_settings.php. Dotyczy to wersji 3.5.x < 3.5.8.1 i 4.0.0 < 4.0.0-rc3. Wersje PHP > 5.4.6 nie są podatne na ataki.
-
 ## MySQL - SQL Injection
 (Wykonywane ręcznie) 
 
 ## Drupal - Coder Module Deserialization RCE
-Moduł ten wykorzystuje lukę w zabezpieczeniach modułu Drupal CODER umożliwiającą zdalne wykonanie polecenia. Nieuwierzytelnieni użytkownicy mogą wykonywać dowolne polecenia w kontekście użytkownika serwera WWW. Moduł CODER nie sprawdza w wystarczającym stopniu danych wejściowych użytkownika w pliku skryptu z rozszerzeniem PHP. Złośliwy, nieuwierzytelniony użytkownik może wysyłać żądania bezpośrednio do tego pliku w celu wykonania dowolnych poleceń. Aby można było z tego skorzystać, moduł nie musi być włączony. Moduł ten został przetestowany w porównaniu z CODER 2.5 z Drupalem 7.5 zainstalowanym na Ubuntu Server.
+Moduł ten wykorzystuje lukę w zabezpieczeniach modułu Drupal CODER umożliwiającą zdalne wykonanie polecenia. Nieuwierzytelnieni użytkownicy mogą wykonywać dowolne polecenia w kontekście użytkownika web-serwera. Moduł CODER nie sprawdza w wystarczającym stopniu danych wejściowych użytkownika w pliku skryptu z rozszerzeniem PHP. Złośliwy, nieuwierzytelniony użytkownik może wysyłać żądania bezpośrednio do tego pliku w celu wykonania dowolnych poleceń. Aby można było z tego skorzystać, moduł nie musi być włączony. Moduł ten został przetestowany w porównaniu z CODER 2.5 z Drupalem 7.5 zainstalowanym na Ubuntu Server.
 
 ## Drupal - HTTP Parameter Key/Value SQL Injection
 Moduł ten wykorzystuje metodę SQL Injection klucza/wartości parametru HTTP Drupala (znaną również jako Drupageddon) w celu uzyskania zdalnej powłoki w podatnej instancji. Moduł ten został przetestowany w stosunku do Drupala 7.0 i 7.31 (poprawiono w wersji 7.32). Dostępne są dwie metody wyzwalania ładunku PHP:
