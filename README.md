@@ -16,6 +16,9 @@ msfconsole -r <plik.rc>
 # Wyniki nmap'a
 ![Wyniki nmap'a](/nmap/nmap.jpg)
 
+## Wyniki Nessus'a
+Znajdują się w pliku: [nesus-basic-scan.pdf](https://github.com/jolo2734/BAW/blob/release/v1.0/nesus-basic-scan.pdf)
+
 # Opis wykorzystanych podatności oraz exploitów
 
 ## ProFTPD - mod_copy
