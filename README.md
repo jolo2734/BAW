@@ -8,10 +8,14 @@ Celem projektu jest wykrycie i wykorzystanie jak największej ilości podatnośc
 
 ## Wymagania
 Wymagany jest zainstalowany program "msfconsole"
-(U nas na systemie operacyjnym Kali Linux)
 
+Oraz Nessus
+(U nas na systemie operacyjnym Kali Linux)
 ## Uruchamianie exploitów 
-msfconsole -r <plik.rc>
+- msfconsole -r <plik.rc>
+ 
+or
+- run Bash scripts
 
 # Wyniki nmap'a
 ![Wyniki nmap'a](/nmap/nmap.jpg)
