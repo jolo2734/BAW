@@ -27,8 +27,8 @@ Moduł ten wykorzystuje polecenia SITE CPFR/CPTO mod_copy w ProFTPD w wersji 1.3
 ## SSH - BruteForce
 Możliwe było zalogowanie się do zdalnego serwera SSH przy użyciu domyślnych danych uwierzytelniających. Ponieważ terminal VT „SSH Brute Force Logins With Default Credentials” (OID: 1.3.6.1.4.1.25623.1.0.108013) może przekroczyć limit czasu, faktyczne zgłaszanie tej luki odbywa się w tym VT. Preferencja skryptu „Przekroczenie limitu czasu raportu” umożliwia skonfigurowanie raportowania takiego przekroczenia limitu czasu.
 
-## MySQL - SQL Injection
-(Wykonywane ręcznie) 
+## MySQL - SQL Injection (Wykonywane ręcznie)
+SQL injection to metoda ataku komputerowego wykorzystująca lukę w zabezpieczeniach aplikacji polegającą na nieodpowiednim filtrowaniu lub niedostatecznym typowaniu danych użytkownika, które to dane są później wykorzystywane przy wykonaniu zapytań (SQL) do bazy danych. Podatne  mogą być na nią systemy przyjmujące dane od użytkownika i dynamicznie generujące zapytania do bazy danych.
 
 ## Drupal - Coder Module Deserialization RCE
 Moduł ten wykorzystuje lukę w zabezpieczeniach modułu Drupal CODER umożliwiającą zdalne wykonanie polecenia. Nieuwierzytelnieni użytkownicy mogą wykonywać dowolne polecenia w kontekście użytkownika web-serwera. Moduł CODER nie sprawdza w wystarczającym stopniu danych wejściowych użytkownika w pliku skryptu z rozszerzeniem PHP. Złośliwy, nieuwierzytelniony użytkownik może wysyłać żądania bezpośrednio do tego pliku w celu wykonania dowolnych poleceń. Aby można było z tego skorzystać, moduł nie musi być włączony. Moduł ten został przetestowany w porównaniu z CODER 2.5 z Drupalem 7.5 zainstalowanym na Ubuntu Server.
