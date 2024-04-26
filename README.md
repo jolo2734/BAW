@@ -31,7 +31,7 @@ Ten moduł wykorzystuje lukę PREG_REPLACE_EVAL w pliku Apply_prefix_tbl program
 (Wykonywane ręcznie) 
 
 ## Drupal - Coder Module Deserialization RCE
-TODO
+Moduł ten wykorzystuje lukę w zabezpieczeniach modułu Drupal CODER umożliwiającą zdalne wykonanie polecenia. Nieuwierzytelnieni użytkownicy mogą wykonywać dowolne polecenia w kontekście użytkownika serwera WWW. Moduł CODER nie sprawdza w wystarczającym stopniu danych wejściowych użytkownika w pliku skryptu z rozszerzeniem PHP. Złośliwy, nieuwierzytelniony użytkownik może wysyłać żądania bezpośrednio do tego pliku w celu wykonania dowolnych poleceń. Aby można było z tego skorzystać, moduł nie musi być włączony. Moduł ten został przetestowany w porównaniu z CODER 2.5 z Drupalem 7.5 zainstalowanym na Ubuntu Server.
 
 ## Drupal - HTTP Parameter Key/Value SQL Injection
 Moduł ten wykorzystuje metodę SQL Injection klucza/wartości parametru HTTP Drupala (znaną również jako Drupageddon) w celu uzyskania zdalnej powłoki w podatnej instancji. Moduł ten został przetestowany w stosunku do Drupala 7.0 i 7.31 (poprawiono w wersji 7.32). Dostępne są dwie metody wyzwalania ładunku PHP:
