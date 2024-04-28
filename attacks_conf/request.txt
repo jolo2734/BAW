@@ -1,15 +1,10 @@
+Info: Trying 192.168.100.86:80...
+Info: Connected to
 POST /payroll_app.php HTTP/1.1
-Host: 192.168.100.86
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, application/signed-exchange; v=b3;q=0.7 
-Accept-Language: pl-PL, pl;q=0.9, en-US;q=0.8,en;q=0.7
-Cache-Control: max-age=0
-Connection: keep-alive
-Content-Type: application/x-www-form-urlencoded
-DNT: 1
-Origin: http://192.168.100.86
-Referer: http://192.168.100.86/payroll_app.php
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 
-Content-Length: 26
-
-user=123&password=345&s=OK
+Host: 192.168.100.86 
+User-Agent: curl/8.5.0 
+Accept: */* 
+Content-Type: text/plain 
+Content-Length: 26 
+  
+user=123&password=345&s=OK  
