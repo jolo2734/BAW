@@ -17,7 +17,9 @@ Oraz Nessus
 or
 - run Bash scripts
 
-# Wyniki nmap'a
+# Rekonesans
+
+## Wyniki nmap'a
 ![Wyniki nmap'a](/nmap/nmap.jpg)
 
 ## Wyniki Nessus'a
@@ -31,7 +33,7 @@ Moduł ten wykorzystuje polecenia SITE CPFR/CPTO mod_copy w ProFTPD w wersji 1.3
 ## SSH - BruteForce
 Możliwe było zalogowanie się do zdalnego serwera SSH przy użyciu domyślnych danych uwierzytelniających. Ponieważ terminal VT „SSH Brute Force Logins With Default Credentials” (OID: 1.3.6.1.4.1.25623.1.0.108013) może przekroczyć limit czasu, faktyczne zgłaszanie tej luki odbywa się w tym VT. Preferencja skryptu „Przekroczenie limitu czasu raportu” umożliwia skonfigurowanie raportowania takiego przekroczenia limitu czasu.
 
-## MySQL - SQL Injection (Wykonywane ręcznie)
+## MySQL - SQL Injection
 SQL injection to metoda ataku komputerowego wykorzystująca lukę w zabezpieczeniach aplikacji polegającą na nieodpowiednim filtrowaniu lub niedostatecznym typowaniu danych użytkownika, które to dane są później wykorzystywane przy wykonaniu zapytań (SQL) do bazy danych. Podatne  mogą być na nią systemy przyjmujące dane od użytkownika i dynamicznie generujące zapytania do bazy danych.
 
 ## Drupal - Coder Module Deserialization RCE
